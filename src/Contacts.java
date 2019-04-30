@@ -3,12 +3,10 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-@SuppressWarnings("serial")
 public class Contacts extends TreeMap<String, String> {
 
 	File file;
 
-	@SuppressWarnings("resource")
 	public String exec(String cmd) {
 		String result = null;
 

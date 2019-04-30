@@ -3,13 +3,15 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.TreeMap;
 
+@SuppressWarnings("serial")
 public class Contacts extends TreeMap<String, String> {
 
 	File file;
-	
+
+	@SuppressWarnings("resource")
 	public String exec(String cmd) {
 		String result = null;
-		
+
 		Scanner s = new Scanner(cmd);
 		int estado = 0;
 		String token;
@@ -34,7 +36,7 @@ public class Contacts extends TreeMap<String, String> {
 				try {
 					s.skip("-");
 					estado = 3;
-				}catch (NoSuchElementException e) {
+				} catch (NoSuchElementException e) {
 					result = "Se esperaba '-'";
 					estado = 5;
 				}
@@ -43,7 +45,7 @@ public class Contacts extends TreeMap<String, String> {
 				try {
 					s.skip(":");
 					estado = 4;
-				}catch (NoSuchElementException e) {
+				} catch (NoSuchElementException e) {
 					result = "Se esperaba ':'";
 					estado = 5;
 				}
@@ -53,7 +55,7 @@ public class Contacts extends TreeMap<String, String> {
 					token = s.skip("\\d{9}").match().group();
 					put(nombre, token);
 					estado = 5;
-				}catch (NoSuchElementException e) {
+				} catch (NoSuchElementException e) {
 					result = "Se esperaba un teléfono";
 					estado = 5;
 				}
@@ -74,21 +76,22 @@ public class Contacts extends TreeMap<String, String> {
 				break;
 			}
 		}
-		
+
 		return result;
+
 	}
-	
+
 	public void load(File file) {
-		
+
 	}
-	
+
 	public void save() {
-	
+
 	}
-	
+
 	public void saveas(File file) {
 		this.file = file;
 		save();
 	}
-	
+
 }

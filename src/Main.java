@@ -82,7 +82,6 @@ public class Main extends JFrame implements ActionListener, KeyListener, WindowL
 			textArea.append(result + "\n");
 		}
 		cmd.setText("");
-//		cmd.requestFocus();
 	}
 	
 	public static void main(String[] args) {
@@ -91,7 +90,6 @@ public class Main extends JFrame implements ActionListener, KeyListener, WindowL
 			try {
 				new Main().setVisible(true);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		});
@@ -104,7 +102,6 @@ public class Main extends JFrame implements ActionListener, KeyListener, WindowL
 
 	@Override
 	public void windowClosed(WindowEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -117,31 +114,26 @@ public class Main extends JFrame implements ActionListener, KeyListener, WindowL
 
 	@Override
 	public void windowDeactivated(WindowEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void windowDeiconified(WindowEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void windowIconified(WindowEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void windowOpened(WindowEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void keyPressed(KeyEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -152,7 +144,6 @@ public class Main extends JFrame implements ActionListener, KeyListener, WindowL
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
